@@ -1,7 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
 .frame {
-
+    top: 50%;               /* moves outermost element so that top rests halfway between top and bottom of browser */
+    left: 50%;              /* moves outermost element so that left side rests halfway between left and right sides of browser */
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    margin-top: -200px;     /* adjusts the content of the outermost element to display above top of element by 200px */
+    margin-left: -200px;    /* adjusts the content of the outermost element to display to the left of the element by 200px */
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.3);
+    background: #43389F;
+    background: -webkit-linear-gradient(bottom left, #43389F 0%, #4EC6CA 100%);
+    background: -moz-linear-gradient(bottom left, #43389F 0%, #4EC6CA 100%);
+    background: -o-linear-gradient(bottom left, #43389F 0%, #4EC6CA 100%);
+    background: linear-gradient(to top right, #43389F 0%, #4EC6CA 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43389F', endColorstr='#4ec6ca',GradientType=1 );
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
 }
 
 .center {
