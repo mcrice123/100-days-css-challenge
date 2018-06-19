@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
 
-.frame {
+.frame { /* Outermost div */
     top: 50%;               /* moves outermost element so that top rests halfway between top and bottom of browser */
     left: 50%;              /* moves outermost element so that left side rests halfway between left and right sides of browser */
     width: 400px;
@@ -20,19 +20,83 @@
     color: #fff;
 }
 
-.center {
-
+.center {               /* Centered div */
+    position: absolute;
+    top: 50.8%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
 }
 
 .number {
-
+    position: relative;
+    height: 100px;
+    width: 200px;
 }
 
-.big {
-
+.one-one {               /* Rotated div block -- '1' */
+    z-index: 1;
+    background: #fff;
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    top: 0;
+    left: -16px;
+    border-radius: 3px;
+    box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+    transform: rotate(50deg);
 }
 
-.small {
+.one-two {               /* Main div for '1' */
+    position: absolute;
+    z-index: 10;
+    width: 24px;
+    height: 100px;
+    background: #fff;
+    top: 0;
+    left: 0px;
+    border-radius: 3px;
+    box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+}
 
+.zero-one, .zero-two {   /* Divs for '0's */
+    position: absolute;
+    box-shadow: 0 0 13px 0 rgba(0,0,0,0.2);
+    z-index: 8;
+    top: 0;
+    left: 17px;                       /* positioned slightly to the right */
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 24px solid #fff;
+}
+
+.zero-two {             /* Second '0' div only */
+    z-index: 6;
+    left: 100px;
+}
+
+.big {                  /* 'Days' div */
+    position: relative;
+    z-index: 20;
+    display: block;
+    text-align: center;
+    font-size: 81px;
+    line-height: 65px;
+    text-transform: uppercase;   /* CSS can transform text to uppercase!!! */
+    font-weight: 700;
+    margin-left: -8px;     /* Aligning 'D' with the '1' */
+}
+
+.small {                /* 'CSS Challenge' div */
+    position: relative;
+    z-index: 20;
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-left: -4px;        /* Centers the div a little better, compared with the other divs */
 }
 
