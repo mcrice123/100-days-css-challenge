@@ -46,6 +46,37 @@ $bezier: cubic-bezier(.21,.98, .6, .91);
   animation: jump-jump-1 2s $bezier infinite alternate;
 }
 
+.dot-2 {
+  background: #fff; /* GOOD */
+  position: absolute; /* GOOD */
+  z-index: 2; /* GOOD */
+  /*width: 70px;
+  height: 70px;
+  top: 75px;
+  left: 75px;*/
+  border-radius: 50%; /* GOOD */
+  animation-fill-mode: both; /* GOOD */
+  animation: jump-jump-2 2s $bezier infinite alternate; /* GOOD */
+
+  width: 60px;
+  height: 60px;
+  top: 80px;
+  left: 80px;
+}
+
+.dot-3 {
+  position: absolute; /* GOOD */
+  width: 90px; /* GOOD */
+  height: 90px; /* GOOD */
+  top: 65px; /* GOOD */
+  left: 65px; /* GOOD */
+  background: #fff; /* GOOD */
+  border-radius: 50%; /* GOOD */
+  z-index: 1; /* GOOD */
+  animation-fill-mode: both; /* GOOD */
+  animation: jump-jump-3 2s $bezier infinite alternate; /* GOOD */
+}
+
 @keyframes jump-jump-1 {
   0%, 70% {
     box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.2);
@@ -57,5 +88,25 @@ $bezier: cubic-bezier(.21,.98, .6, .91);
   }
 }
 
+@keyframes jump-jump-2 {
+  0%, 40% { /* I had 50%, but that's pretty close */
+    box-shadow:2px 2px 3px 2px rgba(0,0,0,0.2); /* GOOD */
+    transform: scale(0); /* GOOD */
+  }
+  100% { /* GOOD */
+    box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3); /* GOOD */
+    transform: scale(1); /* GOOD */
+  }
+}
 
+@keyframes jump-jump-3 {
+  0%, 10% { /* I had 20% -- off by 10% twice! */
+    box-transform: 2px 2px 3px 2px rgba(0,0,0,0.2); /* GOOD */
+    transform: scale(0); /* GOOD */
+  }
+  100% { /* GOOD */
+    box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3); /* GOOD */
+    transform: scale(1); /* GOOD */
+  }
+}
 
