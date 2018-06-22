@@ -1,31 +1,188 @@
+/* rotate fast (.4), then stop (0), rotate faster (.49), then rotate slower (1) */
 .frame {
   top: 50%;
+  /* good */
   left: 50%;
+  /* good */
   position: absolute;
+  /* good */
   border-radius: 2px;
+  /* good */
   width: 400px;
+  /* good */
   height: 400px;
+  /* good */
   box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
-  background-color: #000;
+  /* good */
+  /* background-color: #000; */
   margin-top: -200px;
-  margin-left: -200px; }
+  /* good */
+  margin-left: -200px;
+  /* good */
+  color: #fff;
+  background: #272C34; }
 
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  height: 50%;
-  width: 50%; }
+  transform: translate(-50%, -50%); }
 
 .circle {
-  border: 50px solid #000;
-  border-radius: 100%;
-  background: #fff;
+  /* border: 50px solid #272C34; */
+  /* border-radius:100%; */
+  /* background: rgba(0,0,0,0); */
   position: relative;
-  height: 100%;
-  width: 100%;
-  margin-top: -25%;
-  margin-left: -25%; }
+  /* good */
+  height: 180px;
+  width: 180px;
+  /* margin-top: -25%; */
+  /* margin-left: -25%; */
+  z-index: 10;
+  overflow: hidden;
+  clip-path: circle(90px at 90px 90px);
+  border-radius: 50%; }
+  .circle .sky {
+    /* background: #4EC6CA; */
+    /* height: 100%; */
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    /* good */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 124px;
+    background: #7ddffc;
+    animation: sky-turns-black 4s cubic-bezier(0.4, 0, 0.49, 1) infinite; }
+  .circle .sun {
+    position: absolute;
+    z-index: 2;
+    top: 7px;
+    left: 73px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #ffef00;
+    transform-origin: 50% 400%;
+    animation: sun-goes-down 4s cubic-bezier(0.4, 0, 0.49, 1) infinite; }
+  .circle .side-left {
+    position: absolute;
+    top: 67px;
+    left: 35px;
+    height: 57px;
+    width: 116px;
+    background: #f4f4f4;
+    clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+    animation: pyramide-shading 4s cubic-bezier(0.4, 0, 0.49, 1) infinite; }
+  .circle .side-right {
+    position: absolute;
+    top: 67px;
+    width: 58px;
+    left: 93px;
+    height: 57px;
+    background: #dddada;
+    clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
+    animation: pyramide-shading 4s cubic-bezier(0.4, 0, 0.49, 1) infinite reverse; }
+  .circle .shadow {
+    position: absolute;
+    z-index: 2;
+    top: 124px;
+    left: -80px;
+    height: 30px;
+    width: 360px;
+    background: rgba(0, 0, 0, 0.2);
+    transform-origin: 50% 0%;
+    clip-path: polygon(115px 0%, 231px 0%, 80% 100%);
+    animation: shadow-on-the-floor 4s cubic-bezier(0.4, 0, 0.49, 1) infinite; }
+  .circle .ground {
+    /*background: #ceb454; */
+    /* width: 100%; */
+    /*height: 35%; */
+    /* top: 65%; */
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: #f0de75;
+    animation: fading-sand 4s cubic-bezier(0.4, 0, 0.49, 1) infinite; }
+
+@keyframes sun-goes-down {
+  /* animation for sun */
+  0% {
+    background: #f57209;
+    /* start out orange */
+    transform: rotate(-70deg);
+    /* start out about 10-o-clock position (?) */ }
+  /* 360 - 70 = 290 */
+  30% {
+    background: #ffef00;
+    /* same color as defined under 'sun' class */
+    transform: rotate(-28deg);
+    /* rotate to about 11-o-clock position */ }
+  70% {
+    background: #ffef00;
+    /* same color */ }
+  100% {
+    background: #f57209;
+    /* back to original orange */
+    transform: rotate(70deg); } }
+@keyframes sky-turns-black {
+  0% {
+    background: #272C34;
+    /* start out as same black as background */ }
+  30% {
+    background: #7ddffc;
+    /* turn to blue value defined under 'sky' class */ }
+  70% {
+    background: #7ddffc;
+    /* stay same color */ }
+  100% {
+    background: #272C34;
+    /* return to black background color */ } }
+@keyframes pyramide-shading {
+  /* pyramid animation */
+  0% {
+    background: #272C34;
+    /* start with background color */ }
+  30% {
+    background: #f4f4f4;
+    /* GOOD -- same color as under 'left-side' class */ }
+  70% {
+    background: #dddada;
+    /* same color as under 'right-side' class */ }
+  100% {
+    background: #272C34;
+    /* turn back into background color */ } }
+@keyframes shadow-on-the-floor {
+  0% {
+    transform: scaleY(0);
+    clip-path: polygon(115px 0%, 231px 0%, 100% 100%); }
+  30% {
+    transform: scaleY(1);
+    clip-path: polygon(115px 0%, 231px 0%, 80% 100%); }
+  55% {
+    transform: scaleY(0.4); }
+  75% {
+    transform: scaleY(1); }
+  100% {
+    transform: scaleY(0);
+    clip-path: polygon(115px 0%, 231px 0%, 0% 100%); } }
+@keyframes fading-sand {
+  /* animation for 'ground' -- I was able to figure out how to do this one without looking! :) */
+  0% {
+    background: #272C34;
+    /* GOOD -- start out as black background color */ }
+  30% {
+    background: #f0de75;
+    /* GOOD -- turn to same background color as under 'ground' class */ }
+  70% {
+    background: #f0de75;
+    /* GOOD -- stay same color */ }
+  100% {
+    background: #272C34;
+    /* GOOD --- turn to black background color */ } }
 
 /*# sourceMappingURL=index.css.map */
