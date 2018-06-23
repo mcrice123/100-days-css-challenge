@@ -17,7 +17,7 @@ $blue: #7ba2ff;
   background: #42a7a1;
   font-family: 'Open Sans', Helvetica, sans-serif;
   color: #fff;
-  -webkit-font-smoothing: anialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -153,13 +153,107 @@ $blue: #7ba2ff;
       bottom: 0;
     }
 
-    /* MORE HERE */
+    .data {
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      polyline {
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+
+      &.red polyline {
+        stroke: $red;
+      }
+
+      &.blue polyline {
+        stroke: $blue; /* GOOD */
+      }
+
+      .tooltip {
+        position: absolute;
+        bottom: 13px;
+        left: 50%;
+        transform: translate3d(-50%, 10px, 0);
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 11px;
+        color: #fff;
+        padding: 8px 6px;
+        border-radius: 3px;
+        visibility: hidden;
+        opacity: 0;
+        transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+
+        &:after {
+          position: absolute;
+          display: block;
+          content: '';
+          height: 6px;
+          width: 6px;
+          left: 50%;
+          margin-left: -3px;
+          bottom: -3px;
+          transform: rotate(45deg);
+        }
+      }
+
+      [class^="point-"] {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        cursor: pointer;
+        z-index: 10;
+
+        &:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+          transform: translate3d(-50%, 0, 0);
+        }
+      }
+
+      &.red {
+
+        [class^="point-"], .tooltip, .tooltip:after {
+          background: $red;
+        }
+
+        .point-1 { left: 7px; top: 43px; }
+        .point-2 { left: 48px; top: 9px; }
+        .point-3 { left: 88px; top: 20px; }
+        .point-4 { left: 128px; top: 8px; }
+        .point-5 { left: 169px; top: 35px; }
+        .point-6 { left: 209px; top: 45px; } /* NICE! */
+        .point-7 { left: 249px; top: 16px; } /* NICE! */
+      }
+
+      &.blue {
+        [class^="point-"], .tooltip, .tooltip:after {
+          background: $blue;
+        }
+
+        .point-1 { left: 7px; top: 58px; }
+        .point-2 { left: 48px; top: 47px; }
+        .point-3 { left: 88px; top: 62px; } /* NICE! */
+        .point-4 { left: 128px; top: 52px; } /* NICE! */
+        .point-5 { left: 169px; top: 58px; } /* NICE! */
+        .point-6 { left: 209px; top: 71px; }
+        .point-7 { left: 249px; top: 61px; } /* NICE! */
+      }
+    }
 
     .days {
       width: 280px;
       margin: 0 auto;
 
-      day {
+      .day {
         display: block;
         float: left;
         width: (100%/7);
