@@ -110,6 +110,41 @@
       background: #7ba2ff;
       /* GOOD */ }
   .card .statistic {
-    position: relative; }
+    position: relative;
+    height: 81px;
+    width: 260px;
+    margin: 0 auto;
+    /* MORE HERE */ }
+    .card .statistic .line-1, .card .statistic .line-2, .card .statistic .line-3 {
+      background: #f2f2f2;
+      /* GOOD -- lucky guess! */
+      /*width: 100%;*/
+      /*height: 3px;*/
+      position: absolute;
+      /* GOOD */
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px; }
+    .card .statistic .line-2 {
+      top: 40px; }
+    .card .statistic .line-3 {
+      /* GOOD */
+      /*top: 80px;*/
+      top: inherit;
+      bottom: 0; }
+    .card .statistic .days {
+      width: 280px;
+      margin: 0 auto; }
+      .card .statistic .days day {
+        display: block;
+        float: left;
+        width: 14.2857142857%;
+        font-size: 9px;
+        color: #949494;
+        line-height: 30px;
+        text-transform: uppercase;
+        /* GOOD */
+        text-align: center; }
 
 /*# sourceMappingURL=index.css.map */
