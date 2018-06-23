@@ -56,5 +56,35 @@
     position: relative;
     background: #f1ba64;
     color: #fff; }
+    .card .header .big {
+      position: absolute;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase; }
+    .card .header .small {
+      position: absolute;
+      font-weight: 400;
+      font-size: 11px; }
+    .card .header .title {
+      /*top: 10px;
+      left: 10px;*/
+      top: 12px;
+      left: 15px; }
+    .card .header .date {
+      top: 30px;
+      /* GOOD */
+      left: 15px;
+      /* GOOD */ }
+    .card .header .type {
+      top: 14px;
+      /* GOOD */
+      right: 15px;
+      /* GOOD */
+      /*float: right;*/ }
+    .card .header .value {
+      /*top: 25px;*/
+      right: 15px;
+      /* GOOD */
+      top: 28px; }
 
 /*# sourceMappingURL=index.css.map */

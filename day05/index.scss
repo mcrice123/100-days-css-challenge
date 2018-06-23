@@ -52,6 +52,43 @@ $blue: #7ba2ff;
     position: relative;
     background: #f1ba64;
     color: #fff;
+
+    .big {
+      position: absolute;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .small {
+      position: absolute;
+      font-weight: 400;
+      font-size: 11px;
+    }
+
+    .title {
+      /*top: 10px;
+      left: 10px;*/
+      top: 12px;
+      left: 15px;
+    }
+
+    .date {
+      top: 30px; /* GOOD */
+      left: 15px; /* GOOD */
+    }
+
+    .type {
+      top: 14px;  /* GOOD */
+      right: 15px;  /* GOOD */
+      /*float: right;*/
+    }
+
+    .value {
+      /*top: 25px;*/
+      right: 15px; /* GOOD */
+      top: 28px;
+    }
   }
 }
 
