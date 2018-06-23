@@ -90,5 +90,41 @@ $blue: #7ba2ff;
       top: 28px;
     }
   }
+
+  .parameter {
+    text-align: right;
+    padding: 10px 0 14px 0;
+
+    span {
+      position: relative;
+      font-size: 9px;
+      color: #606060;
+      line-height: 13px;
+      padding: 0 10px 0 25px;
+    }
+
+    span:before {
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      display: block;
+      content: '';
+      width: 11px;
+      height: 3px;
+      border-radius: 3px;
+    }
+
+    .red:before {
+      background: $red;
+    }
+
+    .blue:before {
+      background: $blue; /* GOOD */
+    }
+  }
+
+  .statistic {
+    position: relative;
+  }
 }
 

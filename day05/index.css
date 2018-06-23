@@ -86,5 +86,30 @@
       right: 15px;
       /* GOOD */
       top: 28px; }
+  .card .parameter {
+    text-align: right;
+    padding: 10px 0 14px 0; }
+    .card .parameter span {
+      position: relative;
+      font-size: 9px;
+      color: #606060;
+      line-height: 13px;
+      padding: 0 10px 0 25px; }
+    .card .parameter span:before {
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      display: block;
+      content: '';
+      width: 11px;
+      height: 3px;
+      border-radius: 3px; }
+    .card .parameter .red:before {
+      background: #fa7373; }
+    .card .parameter .blue:before {
+      background: #7ba2ff;
+      /* GOOD */ }
+  .card .statistic {
+    position: relative; }
 
 /*# sourceMappingURL=index.css.map */
