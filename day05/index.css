@@ -43,16 +43,16 @@
   overflow: hidden; }
   .card .header {
     /*background: #f4bc3a;*/
-    top: 0;
+    /*top: 0;*/
     width: 100%;
     /* GOOD */
-    left: 0;
-    right: 0;
+    /*left: 0;
+    right: 0;*/
     height: 60px;
     /* GOOD */
     /*position: absolute;*/
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
+    /*border-top-right-radius: 2px;
+    border-top-left-radius: 2px;*/
     position: relative;
     background: #f1ba64;
     color: #fff; }
@@ -236,18 +236,30 @@
       .card .statistic .data.blue .point-7 {
         left: 249px;
         top: 61px; }
-    .card .statistic .days {
-      width: 280px;
-      margin: 0 auto; }
-      .card .statistic .days .day {
-        display: block;
-        float: left;
-        width: 14.2857142857%;
-        font-size: 9px;
-        color: #949494;
-        line-height: 30px;
-        text-transform: uppercase;
-        /* GOOD */
-        text-align: center; }
+  .card .days {
+    /* Had to change styling here, b/c day labels weren't appearing at bottom of c */
+    width: 100%;
+    /* Changed width from 280px to full width of container*/
+    /*margin: 0 auto;*/
+    /* Commented this */
+    height: 30px;
+    display: block;
+    /* Added this */
+    bottom: 0;
+    /* Added this */
+    position: absolute;
+    /* Added this */
+    top: 80px;
+    /* Added this */ }
+    .card .days .day {
+      display: block;
+      float: left;
+      width: 14.2857142857%;
+      font-size: 9px;
+      color: #949494;
+      line-height: 30px;
+      text-transform: uppercase;
+      /* GOOD */
+      text-align: center; }
 
 /*# sourceMappingURL=index.css.map */

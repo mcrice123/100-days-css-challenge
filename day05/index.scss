@@ -40,14 +40,14 @@ $blue: #7ba2ff;
 
   .header {
     /*background: #f4bc3a;*/
-    top: 0;
+    /*top: 0;*/
     width: 100%; /* GOOD */
-    left: 0;
-    right: 0;
+    /*left: 0;
+    right: 0;*/
     height: 60px; /* GOOD */
     /*position: absolute;*/
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
+    /*border-top-right-radius: 2px;
+    border-top-left-radius: 2px;*/
 
     position: relative;
     background: #f1ba64;
@@ -225,13 +225,36 @@ $blue: #7ba2ff;
           background: $red;
         }
 
-        .point-1 { left: 7px; top: 43px; }
-        .point-2 { left: 48px; top: 9px; }
-        .point-3 { left: 88px; top: 20px; }
-        .point-4 { left: 128px; top: 8px; }
-        .point-5 { left: 169px; top: 35px; }
-        .point-6 { left: 209px; top: 45px; } /* NICE! */
-        .point-7 { left: 249px; top: 16px; } /* NICE! */
+        .point-1 {
+          left: 7px;
+          top: 43px;
+        }
+        .point-2 {
+          left: 48px;
+          top: 9px;
+        }
+        .point-3 {
+          left: 88px;
+          top: 20px;
+        }
+        .point-4 {
+          left: 128px;
+          top: 8px;
+        }
+        .point-5 {
+          left: 169px;
+          top: 35px;
+        }
+        .point-6 {
+          left: 209px;
+          top: 45px;
+        }
+        /* NICE! */
+        .point-7 {
+          left: 249px;
+          top: 16px;
+        }
+        /* NICE! */
       }
 
       &.blue {
@@ -239,30 +262,60 @@ $blue: #7ba2ff;
           background: $blue;
         }
 
-        .point-1 { left: 7px; top: 58px; }
-        .point-2 { left: 48px; top: 47px; }
-        .point-3 { left: 88px; top: 62px; } /* NICE! */
-        .point-4 { left: 128px; top: 52px; } /* NICE! */
-        .point-5 { left: 169px; top: 58px; } /* NICE! */
-        .point-6 { left: 209px; top: 71px; }
-        .point-7 { left: 249px; top: 61px; } /* NICE! */
+        .point-1 {
+          left: 7px;
+          top: 58px;
+        }
+        .point-2 {
+          left: 48px;
+          top: 47px;
+        }
+        .point-3 {
+          left: 88px;
+          top: 62px;
+        }
+        /* NICE! */
+        .point-4 {
+          left: 128px;
+          top: 52px;
+        }
+        /* NICE! */
+        .point-5 {
+          left: 169px;
+          top: 58px;
+        }
+        /* NICE! */
+        .point-6 {
+          left: 209px;
+          top: 71px;
+        }
+        .point-7 {
+          left: 249px;
+          top: 61px;
+        }
+        /* NICE! */
       }
     }
+  }
 
-    .days {
-      width: 280px;
-      margin: 0 auto;
+  .days { /* Had to change styling here, b/c day labels weren't appearing at bottom of card */
+    width: 100%; /* Changed width from 280px to full width of container*/
+    /*margin: 0 auto;*/ /* Commented this */
+    height: 30px;
+    display: block; /* Added this */
+    bottom: 0; /* Added this */
+    position: absolute; /* Added this */
+    top: 80px; /* Added this */
 
-      .day {
-        display: block;
-        float: left;
-        width: (100%/7);
-        font-size: 9px;
-        color: #949494;
-        line-height: 30px;
-        text-transform: uppercase; /* GOOD */
-        text-align: center;
-      }
+    .day {
+      display: block;
+      float: left;
+      width: (100% / 7);
+      font-size: 9px;
+      color: #949494;
+      line-height: 30px;
+      text-transform: uppercase; /* GOOD */
+      text-align: center;
     }
   }
 }
