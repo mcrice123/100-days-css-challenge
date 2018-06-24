@@ -43,7 +43,7 @@
   /* GOOD */
   width: 330px;
   /* Solution: width: 320px; */
-  height: 300px;
+  /*height: 300px;*/
   /* Solution: height: 299px; */
   margin-top: 50px;
   /* Solution: top: 50px; */
@@ -54,7 +54,8 @@
   box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
   /* GOOD */
   /* Solution */
-  overflow: hidden; }
+  overflow: hidden;
+  height: 299px; }
 
 .profile {
   /*width: 100px;
@@ -166,5 +167,49 @@
       .profile .actions .btn:hover {
         background: #786450;
         color: #fff; }
+
+.stats {
+  width: 130px;
+  float: right; }
+  .stats .box {
+    width: 100%;
+    height: 99px;
+    /* GOOD */
+    text-align: center;
+    /* GOOD */
+    margin-top: 0;
+    margin-bottom: 1px;
+    /*background: $second;*/
+    /* Solution */
+    transition: all .4s ease-in-out;
+    background: #F5E8DF;
+    /* Solution */
+    /*
+    &:nth-child(2) {
+      margin: 1px 0;
+    }
+     */ }
+    .stats .box:hover {
+      /* Solution */
+      background: #e1cfc2;
+      cursor: pointer; }
+  .stats span {
+    display: block; }
+  .stats .value {
+    /*font-family: "Open Sans", Helvetica, sans-serif;*/
+    font-weight: 600;
+    /* GOOD */
+    font-size: 18px;
+    /* GOOD */
+    /*position: relative;
+    line-height: 14px;*/
+    padding-top: 30px;
+    /* My previous code is a little different, so from the solution, so I added a padding property to get the desired result */ }
+  .stats .parameter {
+    /*font-size: 12px;
+    line-height: 15px;
+    position: relative;*/
+    /* Solution */
+    font-size: 11px; }
 
 /*# sourceMappingURL=index.css.map */
