@@ -14,3 +14,15 @@ $background-blue: #0c5063;
   margin-top: -200px;
   background: $background-blue;
 }
+
+.center {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
