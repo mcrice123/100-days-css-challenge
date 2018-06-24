@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+/* #fca559, #4ec6ca */
+/* text color */
+.frame {
+  position: absolute;
+  /* GOOD */
+  top: 50%;
+  /* GOOD */
+  left: 50%;
+  /* GOOD */
+  width: 400px;
+  /* GOOD */
+  height: 400px;
+  /* GOOD */
+  margin-left: -200px;
+  /* GOOD */
+  margin-top: -200px;
+  /* GOOD */
+  background: #ca7c4e;
+  border-radius: 2px;
+  /* GOOD */
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  /* GOOD */
+  background: -webkit-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+  /* GOOD */
+  background: -moz-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+  /* GOOD */
+  background: -o-linear-gradient(bottom left, #eebe6c 0%, #ca7c4e 100%);
+  /* GOOD */
+  background: linear-gradient(to top right, #eebe6c 0%, #ca7c4e 100%);
+  /* GOOD */
+  /* B/c I opted to use variables for the colors, I had to add a function for converting the color variables to strings for this property to work (I'm guessing it works...) */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=to-string($first), endColorstr=to-string($second),GradientType=1 );
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #786450;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/*# sourceMappingURL=index.css.map */
