@@ -115,6 +115,25 @@ $brown: #786450; /* text color */
     }
   }
 
-  
+  .name {
+    position: relative;
+    /*top: 20px;*/
+    /*font-weight: 700;*/
+    font-size: 14px; /* Solution: 15px */
+    line-height: 12px;
+
+    /* Solution */
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+  .job {
+    font-size: 12px; /* Solution: 11px */
+    position: relative;
+    /*top: 20px;*/
+
+    /* Solution */
+    line-height: 15px;
+  }
 }
 
