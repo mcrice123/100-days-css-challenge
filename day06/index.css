@@ -36,4 +36,24 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.center {
+  position: absolute;
+  /* GOOD */
+  background: #fff;
+  /* GOOD */
+  width: 330px;
+  /* Solution: width: 320px; */
+  height: 300px;
+  /* Solution: height: 299px; */
+  margin-top: 50px;
+  /* Solution: top: 50px; */
+  margin-left: 35px;
+  /* Solution: left: 40px; */
+  border-radius: 3px;
+  /* GOOD */
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  /* GOOD */
+  /* Solution */
+  overflow: hidden; }
+
 /*# sourceMappingURL=index.css.map */
