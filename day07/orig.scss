@@ -5,18 +5,16 @@ $blue-dark: #264057;
 $blue-light: #B2DAFF;
 
 .frame {
-  position: absolute; /* GOOD */
-  border-radius: 2px; /* GOOD */
-  box-shadow: 1px 2px 10px 0 rgba(0,0,0,0.3); /* GOOD */
-  width: 400px; /* GOOD */
-  height: 400px; /* GOOD */
-  top: 50%; /* GOOD */
-  left: 50%; /* GOOD */
-  margin-left: -200px; /* GOOD */
-  margin-top: -200px; /* GOOD */
-  background: $blue-dark; /* GOOD */
-
-  /* Solution */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+  background: $blue-dark;
   color: #666666;
   font-family: 'Open Sans', Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,40 +22,31 @@ $blue-light: #B2DAFF;
   overflow: hidden;
 }
 
-.center { /* Solution has this as class 'panel' */
-  background: #fff; /* GOOD */
-  border-radius: 2px; /* Solution: 3px */
-  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3); /* GOOD */
-  width: 300px; /* GOOD */
-  height: 300px; /* GOOD */
-  position: absolute; /* GOOD */
-  /*margin-top: 50px;
-  margin-left: 50px;*/
-
-  /* Solution */
+.panel {
+  position: absolute;
   z-index: 2;
+  height: 300px;
+  width: 300px;
   top: 50px;
   left: 50px;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
   transition: all .5s ease-in-out;
 
   &.show-menu {
-    transform: translate3d(150px, 0, 0);
+    transform: translate3d(150px,0,0);
   }
 
   .header {
-    width: 100%; /* GOOD */
-    /*border-radius: 2px;*/
-    height: 60px; /* GOOD */
-    background: $blue; /* GOOD */
-    /*color: #fff;*/
-    /*text-align: center;*/
+    height: 60px;
+    width: 100%;
+    background: $blue;
 
     .menu-icon {
-      width: 29px;
-      /*display: inline;*/
-
-      /* Solution */
       position: absolute;
+      width: 29px;
       height: 15px;
       top: 23px;
       left: 20px;
@@ -72,13 +61,9 @@ $blue-light: #B2DAFF;
       }
 
       .dash-top {
-        /* height: 5px; */
-        /* width: 75%; */
-
-        /* Solution */
         position: absolute;
-        height: 3px;
         width: 20px;
+        height: 3px;
         top: 0;
         left: 0;
         background: $blue-light;
@@ -87,40 +72,26 @@ $blue-light: #B2DAFF;
       }
 
       .dash-bottom {
-        /*position: absolute;
-        height: 3px;*/
-        width: 25px; /* Solution: 29px */
-        /*background: $blue-light;
-        border-radius: 3px;*/
-        /*top: 10px;*/
-        /*left: 0;
-        transition: all .2s ease-in-out;*/
-
-        /* Solution */
         @extend .dash-top;
+        width: 29px;
         top: auto;
         bottom: 0;
       }
 
       .circle {
-        position: absolute; /* GOOD */
-        /*height: 6px;
-        width: 6px;
-        border-radius: 3px;*/
-        background: $blue-light; /* GOOD */
-        /*margin-top: -2px;*/
-        right: 0; /* GOOD */
-        transition: all .2s ease-in-out; /* GOOD */
-
-        /* Solution */
+        position: absolute;
         height: 7px;
         width: 7px;
         border-radius: 4px;
         top: -2px;
+        right: 0;
+        background: $blue-light;
+        transition: all .2s ease-in-out;
       }
+
     }
 
-    .title { /* Solution */
+    .title {
       display: block;
       text-align: center;
       line-height: 60px;
@@ -135,8 +106,8 @@ $blue-light: #B2DAFF;
       top: 13px;
       right: 55px;
       width: 230px;
-      height: 34px; /* GOOD */
-      border-radius: 17px; /* GOOD */
+      height: 34px;
+      border-radius: 17px;
       border: none;
       background: #fff;
       padding: 0 17px;
@@ -145,10 +116,10 @@ $blue-light: #B2DAFF;
       transition: all .3s ease-in-out;
       transform: translateX(15px);
       opacity: 0;
-      pointer-events: none; /* The pointer-events property defines whether or not an element reacts to pointer events. */
+      pointer-events: none;
 
       &:focus {
-        outline: none;
+        outline:none;
       }
 
       &.active {
@@ -156,6 +127,7 @@ $blue-light: #B2DAFF;
         opacity: 1;
         pointer-events: all;
       }
+
     }
 
     .search-icon {
@@ -171,31 +143,33 @@ $blue-light: #B2DAFF;
       &:hover {
         color: #fff;
       }
+
     }
+
   }
 
-  .notifications { /* Notifications */
+  .notifications {
     position: relative;
     height: 100%;
     overflow: hidden;
 
-    .line { /* Solution */
+    .line {
       position: absolute;
       top: 0;
       left: 27px;
       bottom: 0;
       width: 3px;
-      background: #ebebeb;
+      background: #EBEBEB;
     }
 
-    .notification { /* Solution */
+    .notification {
       position: relative;
       z-index: 2;
       margin: 25px 20px 25px 43px;
 
       @for $i from 2 through 4 {
         &:nth-child(#{$i}) {
-          animation: here-am-i .5z ease-out ($i/5 + s);
+          animation: here-am-i .5s ease-out ($i/5 + s);
           animation-fill-mode: both;
         }
       }
@@ -208,24 +182,19 @@ $blue-light: #B2DAFF;
       .circle {
         box-sizing: border-box;
         position: absolute;
-        border: 2px solid $blue; /* GOOD */
-        border-radius: 50%; /* Solution: 6px */
-        height: 10px; /* Solution: 11px */
-        width: 10px; /* Solution: 11px */
-        display: block;
-
-        /* Solution */
-        left: -20px;
+        height: 11px;
+        width: 11px;
         background: #fff;
+        border: 2px solid $blue;
         box-shadow: 0 0 0 3px #fff;
+        border-radius: 6px;
+        top: 0;
+        left: -20px;
       }
 
       .time {
-        font-size: 12px; /* Solution: 11px */
-        position: relative;
-
-        /* Solution */
         display: block;
+        font-size: 11px;
         line-height: 11px;
         margin-bottom: 2px;
       }
@@ -239,8 +208,11 @@ $blue-light: #B2DAFF;
           font-weight: 600;
         }
       }
+
     }
+
   }
+
 }
 
 .menu {
@@ -249,7 +221,7 @@ $blue-light: #B2DAFF;
   height: 270px;
   top: 65px;
   left: 50px;
-  background: #43627d;
+  background: #43627D;
   border-radius: 3px;
   transition: all .5s ease-in-out;
   transform: translate3d(20px,0,0);
@@ -265,7 +237,7 @@ $blue-light: #B2DAFF;
   }
 
   li {
-    color: #93b2cd;
+    color: #93B2CD;
     margin: 0;
     padding: 18px 17px;
     list-style: none;
@@ -302,4 +274,3 @@ $blue-light: #B2DAFF;
     opacity: 1;
   }
 }
-
