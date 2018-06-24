@@ -130,10 +130,41 @@
     margin-top: 20px; }
   .profile .job {
     font-size: 12px;
-                 /* Solution: 11px; 
-position: relative;
-/*top: 20px;*/
+    /* Solution: 11px */
+    position: relative;
+    /*top: 20px;*/
     /* Solution */
     line-height: 15px; }
+  .profile .actions {
+    margin-top: 33px; }
+    .profile .actions .btn {
+      display: block;
+      width: 120px;
+      /* GOOD */
+      height: 30px;
+      /* GOOD */
+      /* margin: 10px auto;*/
+      /* Close! */
+      /* background: #fff; */
+      border: 1px solid #786450;
+      /* GOOD */
+      border-radius: 15px;
+      /* GOOD */
+      color: #786450;
+      /* GOOD */
+      font-family: Helvetica, sans-serif;
+      /*font-weight: 700;*/
+      /* Close! */
+      font-size: 12px;
+      /* GOOD */
+      /* Solution */
+      margin: 0px auto 10px auto;
+      background: none;
+      font-weight: 600;
+      transition: all .3s ease-in-out;
+      box-sizing: border-box; }
+      .profile .actions .btn:hover {
+        background: #786450;
+        color: #fff; }
 
 /*# sourceMappingURL=index.css.map */

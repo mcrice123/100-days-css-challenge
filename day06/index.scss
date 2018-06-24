@@ -135,5 +135,35 @@ $brown: #786450; /* text color */
     /* Solution */
     line-height: 15px;
   }
+
+  .actions {
+    margin-top: 33px;
+
+    .btn {
+      display: block;
+      width: 120px; /* GOOD */
+      height: 30px; /* GOOD */
+      /* margin: 10px auto;*/ /* Close! */
+      /* background: #fff; */
+      border: 1px solid $brown; /* GOOD */
+      border-radius: 15px; /* GOOD */
+      color: $brown; /* GOOD */
+      font-family: Helvetica, sans-serif;
+      /*font-weight: 700;*/ /* Close! */
+      font-size: 12px; /* GOOD */
+
+      /* Solution */
+      margin: 0px auto 10px auto;
+      background: none;
+      font-weight: 600;
+      transition: all .3s ease-in-out;
+      box-sizing: border-box;
+
+      &:hover {
+        background: $brown;
+        color: #fff;
+      }
+    }
+  }
 }
 
