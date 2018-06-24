@@ -1,23 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,400);
 .frame {
   position: absolute;
+  /* GOOD */
   border-radius: 2px;
+  /* GOOD */
   box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.3);
+  /* GOOD */
   width: 400px;
+  /* GOOD */
   height: 400px;
+  /* GOOD */
   top: 50%;
+  /* GOOD */
   left: 50%;
+  /* GOOD */
   margin-left: -200px;
+  /* GOOD */
   margin-top: -200px;
-  background: #0c5063; }
+  /* GOOD */
+  background: #264057;
+  /* GOOD */
+  /* Solution */
+  color: #666666;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; }
 
 .center {
+  /* Solution has this as class 'panel' */
   background: #fff;
+  /* GOOD */
   border-radius: 2px;
+  /* Solution: 3px */
   box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  /* GOOD */
   width: 300px;
+  /* GOOD */
   height: 300px;
+  /* GOOD */
   position: absolute;
-  margin-top: 50px;
-  margin-left: 50px; }
+  /* GOOD */
+  /*margin-top: 50px;
+  margin-left: 50px;*/
+  /* Solution */
+  z-index: 2;
+  top: 50px;
+  left: 50px;
+  transition: all .5s ease-in-out; }
+  .center.show-menu {
+    transform: translate3d(150px, 0, 0); }
 
 /*# sourceMappingURL=index.css.map */
