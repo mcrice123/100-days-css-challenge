@@ -50,7 +50,7 @@ $blue-light: #B2DAFF;
     height: 60px; /* GOOD */
     background: $blue; /* GOOD */
     color: #fff;
-    text-align: center;
+    /*text-align: center;*/
 
     .menu-icon {
       width: 29px;
@@ -120,8 +120,13 @@ $blue-light: #B2DAFF;
       }
     }
 
-    .title {
+    .title { /* Solution */
       display: block;
+      text-align: center;
+      line-height: 60px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
     }
   }
 }

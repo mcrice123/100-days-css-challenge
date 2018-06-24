@@ -59,7 +59,7 @@
     background: #5F98CD;
     /* GOOD */
     color: #fff;
-    text-align: center; }
+    /*text-align: center;*/ }
     .center .header .menu-icon {
       width: 29px;
       display: inline;
@@ -117,6 +117,12 @@
         border-radius: 4px;
         top: -2px; }
     .center .header .title {
-      display: block; }
+      /* Solution */
+      display: block;
+      text-align: center;
+      line-height: 60px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px; }
 
 /*# sourceMappingURL=index.css.map */
