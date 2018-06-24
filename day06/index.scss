@@ -46,3 +46,75 @@ $brown: #786450; /* text color */
   overflow: hidden;
 }
 
+.profile {
+  /*width: 100px;
+  padding: 50px; */
+  text-align: center; /* GOOD */
+  height: 300px; /* Solution: height: 320px; (same height as 'center') */
+  /* Solution */
+  float: left;
+  width: 200px;
+
+  .image {
+    /* Solution */
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 38px auto 0 auto;
+
+    .circle-1 {
+      position: absolute;
+      box-sizing: border-box; /* The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not. */
+      width: 76px;
+      height: 76px;
+      top: -3px;
+      left: -3px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: $brown $brown $brown transparent; /* Applies color on all sides except left */
+      border-radius: 50%; /* Makes border circular */
+      transition: all 1.5s ease-in-out; /* How quickly border will move */
+    }
+
+    .circle-2 {
+      position: absolute;
+      /*width: 80px;
+      height: 80px;*/
+      top: -6px; /* GOOD */
+      left: -6px; /* GOOD */
+      border-width: 1px;
+      border-style: solid;
+      border-color: $brown transparent $brown $brown; /* GOOD */
+      border-radius: 50%;
+      transition: all 1.5s ease-in-out;
+
+      /* Solution */
+      width: 82px;
+      height: 82px;
+      @extend .circle-1;
+    }
+
+    img {
+      /*clip-path: circle(90px at 35px 35px);*/
+      /* Solution */
+      display: block;
+      border-radius: 50%;
+      background: #f5e8df;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .circle-1 {
+        transform: rotate(360deg);
+      }
+
+      .circle-2 {
+        transform: rotate(-360deg); /* GOOD -- YES! */
+      }
+    }
+  }
+
+  
+}
+
