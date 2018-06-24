@@ -124,5 +124,42 @@
       color: #fff;
       font-weight: 600;
       font-size: 15px; }
+    .center .header .search-input {
+      box-sizing: border-box;
+      position: absolute;
+      top: 13px;
+      right: 55px;
+      width: 230px;
+      height: 34px;
+      /* GOOD */
+      border-radius: 17px;
+      /* GOOD */
+      border: none;
+      background: #fff;
+      padding: 0 17px;
+      font-size: 13px;
+      color: #666;
+      transition: all .3s ease-in-out;
+      transform: translateX(15px);
+      opacity: 0;
+      pointer-events: none;
+      /* The pointer-events property defines whether or not an element reacts to pointer events. */ }
+      .center .header .search-input:focus {
+        outline: none; }
+      .center .header .search-input.active {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: all; }
+    .center .header .search-icon {
+      position: absolute;
+      z-index: 2;
+      font-size: 21px;
+      color: #B2DAFF;
+      top: 18px;
+      right: 20px;
+      transition: all .3s ease;
+      cursor: pointer; }
+      .center .header .search-icon:hover {
+        color: #fff; }
 
 /*# sourceMappingURL=index.css.map */
